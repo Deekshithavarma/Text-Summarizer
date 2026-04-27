@@ -61,6 +61,40 @@ pip install -r requirements.txt
 
 ### 5️⃣ Run the Application
 
+⚠️ The trained model is not included in this repository due to file size limitations.
+
+To use this application, you need to generate the model by running the training notebook.
+
+---
+
+### 🔹 Steps to Generate the Model
+
+1. Open the text_summarizer.ipynb:
+
+2. Run all cells (preferably in Google Colab)
+
+3. After training completes, save the model:
+
+```python
+model.save_pretrained("./saved_summary_model")
+tokenizer.save_pretrained("./saved_summary_model")
+
+Make sure the folder structure looks like:
+
+saved_summary_model/
+├── config.json
+├── model.safetensors
+├── tokenizer.json
+├── tokenizer_config.json
+
+Ensure the folder is in the root directory:
+
+text-summarizer/
+├── app.py
+├── saved_summary_model/
+
+then run below command in terminal
+
 uvicorn app:app --reload
 
 ---

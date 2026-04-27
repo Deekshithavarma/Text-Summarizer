@@ -6,60 +6,64 @@ A web-based Text Summarization application built using the T5 Transformer model.
 
 ## 🚀 Features
 
-- 🔹 Text summarization using T5 Transformer
-- 🔹 FastAPI backend for efficient API handling
-- 🔹 Clean and user-friendly frontend UI
-- 🔹 Handles long text inputs (up to 512 tokens)
-- 🔹 Easy to extend and deploy
+- Text summarization using T5 Transformer  
+- FastAPI backend for efficient API handling  
+- Clean and user-friendly frontend UI  
+- Handles long text inputs (up to 512 tokens)  
+- Easy to extend and deploy  
 
 ---
 
 ## 🧠 Model Details
 
-- Model: T5 (Text-to-Text Transfer Transformer)
-- Framework: HuggingFace Transformers
-- Backend: PyTorch
-- The model is fine-tuned for text summarization tasks
+- Model: T5 (Text-to-Text Transfer Transformer)  
+- Framework: HuggingFace Transformers  
+- Backend: PyTorch  
+- Fine-tuned for text summarization tasks  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python
-- FastAPI
-- HuggingFace Transformers
-- PyTorch
-- HTML, CSS, JavaScript
+- Python  
+- FastAPI  
+- HuggingFace Transformers  
+- PyTorch  
+- HTML, CSS, JavaScript  
+
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1. Clone the Repository
 
 git clone https://github.com/your-username/text-summarizer.git  
-cd text-summarizer
+cd text-summarizer  
 
 ---
 
-### 2️⃣ Create Virtual Environment (Recommended)
+### 2. Create Virtual Environment (Recommended)
 
-# Windows
-python -m venv venv
-venv\Scripts\activate
+**Windows**
 
-# Mac/Linux
-python3 -m venv venv
-source venv/bin/activate
+python -m venv venv  
+venv\Scripts\activate  
+
+**Mac/Linux**
+
+python3 -m venv venv  
+source venv/bin/activate  
 
 ---
 
-### 3️⃣ Install Dependencies
+### 3. Install Dependencies
 
-pip install -r requirements.txt
+pip install -r requirements.txt  
+
 ---
 
-### 5️⃣ Run the Application
+## 🧠 Model Setup (Required)
 
 ⚠️ The trained model is not included in this repository due to file size limitations.
 
@@ -67,44 +71,58 @@ To use this application, you need to generate the model by running the training 
 
 ---
 
-### 🔹 Steps to Generate the Model
+### Steps to Generate the Model
 
-1. Open the text_summarizer.ipynb:
+1. Open the notebook:  
+   `text_summarizer.ipynb`
 
 2. Run all cells (preferably in Google Colab)
 
-3. After training completes, save the model:
+3. Save the model:
 
-```python
-model.save_pretrained("./saved_summary_model")
-tokenizer.save_pretrained("./saved_summary_model")
+model.save_pretrained("./saved_summary_model")  
+tokenizer.save_pretrained("./saved_summary_model")  
 
-Make sure the folder structure looks like:
+---
+
+### Expected Folder Structure
 
 saved_summary_model/
-├── config.json
-├── model.safetensors
-├── tokenizer.json
-├── tokenizer_config.json
+├── config.json  
+├── model.safetensors  
+├── tokenizer.json  
+├── tokenizer_config.json  
 
-Ensure the folder is in the root directory:
+---
+
+### Place the Model
 
 text-summarizer/
-├── app.py
-├── saved_summary_model/
-
-then run below command in terminal
-
-uvicorn app:app --reload
+├── app.py  
+├── saved_summary_model/  
 
 ---
 
-### 6️⃣ Open in Browser
+## ▶️ Run the Application
 
-http://127.0.0.1:8000
+uvicorn app:app --reload  
 
 ---
 
-### 7️⃣ Test API (Optional)
+## 🌐 Open in Browser
 
-http://127.0.0.1:8000/docs
+http://127.0.0.1:8000  
+
+---
+
+## 🙌 Acknowledgements
+
+- HuggingFace Transformers  
+- T5 Model by Google Research  
+- FastAPI  
+
+---
+
+## 📧 Contact
+
+Feel free to reach out for suggestions or improvements!
